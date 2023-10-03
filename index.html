@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Joy Living</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./logos/1.png" type="image/x-icon">
+    <link rel="stylesheet" href="media_query.css">
+</head>
+<body>
+      <img src="./logos/bg.png" alt="" class="bg">
+    
+      <!-- background vid -->
+    <video playsinline autoplay loop muted plays-inline class="bg" id="bg1">
+      <source src="vid.mp4" type="video/mp4">
+    </video>
+    <video playsinline autoplay loop muted plays-inline class="bg" id="bg2">
+      <source src="vid2.mp4" type="video/mp4">
+    </video>
+      <!-- end background vid-->
+
+
+    <div class="nav">
+      <div class="logo">
+        <img src="logos/7.png" alt="">
+      </div>        
+      
+        <div class="elem">
+            <a href=""><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+            <a href=""><i class="fa-brands fa-youtube fa-lg"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter fa-lg"></i></a>          
+        </div>
+    </div>
+    
+    <div class="hero">
+        <img src="logos/4.png" alt="">
+        <div class="cont">
+            <h1 class="cs">UNVEILING SOON..</h1>
+            <i id="" class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
+        </div>
+
+        
+        <div class="bt">
+          <div class="wrapper">
+            <div class="collapse">
+              <div class="sub-btn">
+              <!-- BUTTON1 -->
+              
+              <input type="checkbox" name="" id="collapse-head">
+              <label class="btn" for="collapse-head">Subscribe</label>
+              
+              <div class="collapse-text">
+                <div>
+                  <div style="font-style: normal;">
+                    <form action="#" id="form" style="background-color: transparent;">
+                      <div class="input-box">
+                        <input type="text" name="" id="email" placeholder="Enter Email Address" onkeydown="validation()">
+                        <a href="#" class="plane" id="submitButton"><i class="fa-solid fa-paper-plane fa-l" href="#"></i></a> 
+                        <span id="text"></span>
+                      </div>
+                      
+                    </form>
+                    <div class="popup-card" id="popupCard">
+                      <div class="popup-content">
+                          <div class="success-icon">&#10004;</div>
+                          <p>Email sent successfully</p>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <!-- BUTTON2 -->
+              <label class="btn">Read More</label>
+              
+            </div>
+            
+          </div>          
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

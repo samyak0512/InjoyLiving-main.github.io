@@ -1,0 +1,62 @@
+@media (max-width: 700px){
+    /* Adjustments for screens 600px or less go here */
+    
+    
+    #bg1{
+        display: none;
+    }
+    #bg2{
+        display: block;
+    }
+
+    .elem {
+        gap:6vh;
+        position: absolute;
+        bottom: 3vh;
+    }
+    
+    .hero {
+        margin-top: 80px;
+        gap: 5px;
+    }
+    
+    .hero img {
+        width:300px; /* Example: You might want to decrease the image width */
+    }
+
+    .cont h1 {    
+           
+        -webkit-text-fill-color: white;
+    }
+    
+    .wrapper{
+        display: flex;
+      }
+      
+    
+    .collapse{
+        overflow: hidden;
+        gap: 1px;
+    }
+    
+    .btn {
+        font-size: 12px;
+        height: 5vh;
+        width: 30vw;
+        padding: 10px;
+      }
+      
+    
+    #form #email {
+        width: 70%;
+    }
+    
+    #form .input-box {
+        margin-right: 0; 
+    }
+    
+    .popup-card {
+        width: 50%;
+        z-index: 100;
+    }
+}
