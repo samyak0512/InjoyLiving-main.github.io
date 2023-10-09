@@ -14,9 +14,13 @@ body{
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(36,26,26,1) 100%);
     font-family: 'Poppins', sans-serif;
-    color: #fff;
-   
+    color: #fff; 
 }
+.blurr.blur{
+  filter: blur(5px);
+  pointer-events: none;
+}
+
 .bg{
     position: absolute;
     top: 0;
@@ -101,6 +105,7 @@ body{
     align-items: center;
     gap: 30px;
     text-align: center;
+    margin-bottom: 70px;
 }
 #i{
   opacity: 0.5;
@@ -319,3 +324,132 @@ body{
   color: #28a745;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.744);
+  overflow-y: auto;
+}
+.popup img {
+  width: 100%;
+  border-radius: 8px;
+}
+.popup h2 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+.popup p {
+  margin: 10px 0;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.collapse2{
+  margin-bottom: 2vh;
+}
+.popup .collapse2 {
+  display: none;
+  transition: max-height 0.3s ease-in-out;
+}
+.popup .collapse2.active {
+  display: block;
+}
+
+.popupimage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popupimage{
+  height: 80px;
+  width: 80px;
+  align-items: center;
+}
+.popup .collapse2 input[type="email"] {
+  width: 60%;
+  padding: 10px;
+  margin-top: 1px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+.scrollable {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.coll{
+  margin-top: 20px;
+  width: 20%;
+  height: 40px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #977445;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+.coll:hover{
+  background-color: #977445;
+  letter-spacing: 1px;
+}
+#submitBtn{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #977445;
+  color: #fff;
+  border: 1px solid #977445;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+  border-radius: 5px;
+}
+#submitBtn:hover{
+  padding: 6px;
+  font-size: 20px
+}
+.span-head{
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.popup .collapse2 button:disabled {
+  background-color: #ddd;
+}
+
+.float{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  z-index: 99;
+  bottom: 0px;
+  left: 20px;
+  gap: 10px;
+  font-size: 12px;
+  visibility:hidden;
+}
+
+/* Custom Scroller */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background: #000;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #7d5727;
+  border-radius: 10px;
+}

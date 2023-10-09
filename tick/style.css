@@ -1,0 +1,12 @@
+
+.float{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    gap: 10px;
+    display: none;
+}

@@ -11,19 +11,19 @@
     <link rel="stylesheet" href="media_query.css">
 </head>
 <body>
-      <img src="./logos/bg.png" alt="" class="bg">
     
-      <!-- background vid -->
-    <video playsinline autoplay loop muted plays-inline class="bg" id="bg1">
+    
+    <!-- background vid -->
+    <video playsinline autoplay loop muted plays-inline class="bg blurr" id="bg1">
       <source src="vid.mp4" type="video/mp4">
     </video>
-    <video playsinline autoplay loop muted plays-inline class="bg" id="bg2">
+    <video playsinline autoplay loop muted plays-inline class="bg blurr" id="bg2">
       <source src="vid2.mp4" type="video/mp4">
     </video>
-      <!-- end background vid-->
+    <!-- end background vid-->
 
 
-    <div class="nav">
+    <div class="nav blurr">
       <div class="logo">
         <img src="logos/7.png" alt="">
       </div>        
@@ -40,7 +40,6 @@
         <img src="logos/4.png" alt="">
         <div class="cont">
             <h1 class="cs">UNVEILING SOON..</h1>
-            <i id="" class="fa-solid fa-minus fa-2xl" style="color: #ffffff;"></i>
         </div>
 
         
@@ -51,7 +50,7 @@
               <!-- BUTTON1 -->
               
               <input type="checkbox" name="" id="collapse-head">
-              <label class="btn" for="collapse-head">Subscribe</label>
+              <label class="btn blurr" for="collapse-head">Subscribe</label>
               
               <div class="collapse-text">
                 <div>
@@ -59,7 +58,7 @@
                     <form action="#" id="form" style="background-color: transparent;">
                       <div class="input-box">
                         <input type="text" name="" id="email" placeholder="Enter Email Address" onkeydown="validation()">
-                        <a href="#" class="plane" id="submitButton"><i class="fa-solid fa-paper-plane fa-l" href="#"></i></a> 
+                        <a href="#" class="plane" id="submitButton" onclick="sendMail()"><i class="fa-solid fa-paper-plane fa-l" href="#"></i></a> 
                         <span id="text"></span>
                       </div>
                       
@@ -75,16 +74,75 @@
               </div>
               </div>
               <!-- BUTTON2 -->
-              <label class="btn">Read More</label>
+              <label class="btn blurr" id="readMoreBtn">Read More</label>
+              <!-- email sending -->
+              <div id="popup" class="popup">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <div class="popupimage">
+                  <img src="./logos/2.png" alt="Image" id="popupimage">
+                </div>
+                <h2>In Joy Living — where every moment is a celebration,every piece a masterpiece, and every space a sanctuary.</h2>
+                <div id="bodyContent" class="scrollable">
+                  <p id="bodyText">
+                                  <br>
+                                  Welcome to a space where imagination converges with reality to create exquisite pieces of art
+                                  and décor, a place where every object tells a story of its own. In Joy Living is not just a brand;
+                                  it’s a philosophy, a way of life, that believes in transforming spaces into realms of aesthetic
+                                  delight and serene ambiance.
+                                  <br><br>
+                                  Our creations are the epitomes of surrealism, intricately designed to blend mythology and
+                                  contemporary art, inviting you to experience the extraordinary in the ordinary. Each piece is a
+                                  journey, a discovery, a conversation starter, encapsulating the essence of luxury, elegance,
+                                  anuniqueness.
+                                  <br><br>
+                                  <span class="span-head">Craftsmanship & Quality:</span> <br>
+                                  In Joy Living stands as a testament to impeccable craftsmanship and unparalleled quality,
+                                  specializing in the creation of high-end home décor items and artifacts. Every piece is a whisper
+                                  of a forgotten era, a brush stroke of the unseen worlds, creating harmonious symphony between
+                                  the past, present, and future. <br><br>
+                                  <span class="span-head">Stay Tuned:</span> <br>
+                                  While we are fervently working behind the scenes to bring our vision to life, we invite you to join
+                                  us on this enchanting journey. Subscribe to our newsletter, and be the first to receive exclusive
+                                  updates and behind-the-scenes glimpses.<br>
+                                  Subscribe Now for exclusive updates and a front-row seat to the unveiling of a world where art
+                                  and living intertwine seamlessly.<br><br>
+                                  <span class="span-head">Note:</span> <br>
+                                  For now, we are keeping the mystery alive, revealing just enough to ignite your imagination and
+                                  desire. Stay tuned for the full revelation, as we pull back the curtains to a realm where every
+                                  artifact is a portal to otherworldly beauty and sublime tranquility
+                </p>
+                </div>
+                
               
-            </div>
-            
+                <button class="coll" onclick="togglecollapse2()">Subscribe</button>
+                <div id="collapse2" class="collapse2">
+                  <input type="email" id="email" placeholder="Enter your email" oninput="validateEmail()">
+                  <button id="submitBtn" onclick="sendMail()">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+                <div class="float">
+                    <i class="fa-solid fa-circle-check" style="color: #08d704;"></i>
+                  <p>Thank You For Subscribing.</p>
+                </div>
+              </div>
+              <!-- email sending end-->
+
+            </div>   
           </div>          
         </div>
       </div>
-    </div>
+    
     
 
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                  <script type="text/javascript">
+                      (
+                        function() {
+                          // https://dashboard.emailjs.com/admin/account
+                          emailjs.init('cN4Xxbk6w0joRum4f');
+                        })();
+                  </script>
 </body>
 </html>

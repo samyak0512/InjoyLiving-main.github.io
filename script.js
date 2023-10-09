@@ -45,3 +45,53 @@ function showPopup() {
       popupCard.style.display = 'none';
   }, 3000); // Hide the popup after 3 seconds (adjust as needed)
 }
+
+
+
+
+
+
+
+document.getElementById('readMoreBtn').addEventListener('click', function() {
+  document.getElementById('popup').style.display = 'block';
+  var blurElements = document.getElementsByClassName('blurr');
+  for (var i = 0; i < blurElements.length; i++) {
+    blurElements[i].classList.add('blur');
+  }
+});
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+  var blurElements = document.getElementsByClassName('blurr');
+  for (var i = 0; i < blurElements.length; i++) {
+    blurElements[i].classList.remove('blur');
+  }
+}
+
+function togglecollapse2() {
+  var collapse2 = document.getElementById('collapse2');
+  collapse2.classList.toggle('active');
+}
+function validateEmail() {
+  var email = document.getElementById('email');
+  var submitButton = document.getElementById('submitButton');
+  var submitBtn = document.getElementById('submitBtn');
+  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  submitBtn.disabled = !emailRegex.test(email.value);
+}
+
+
+function sendMail() {
+  var params = {
+    email : document.getElementById("email").value,
+  }
+  emailjs.send("service_qefe2dc", "template_tsnen7e", params).then(
+  function(){
+  var float = document.getElementByClassName("float")[0];
+  float.style.visibility = 'visible';
+  setTimeout(function() {
+    float.style.visibility = 'hidden';
+    }, 3000);
+  })
+}
+
