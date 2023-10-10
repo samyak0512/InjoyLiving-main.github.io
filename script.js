@@ -85,7 +85,7 @@ function sendMail() {
   var params = {
     email : document.getElementById("email").value,
   }
-  emailjs.send("service_qefe2dc", "template_tsnen7e", params).then(
+  emailjs.send("service_r92zzmc","template_hkff0ey", params).then(
   function(){
   var float = document.getElementByClassName("float")[0];
   float.style.visibility = 'visible';
