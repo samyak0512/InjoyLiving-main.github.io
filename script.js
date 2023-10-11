@@ -72,13 +72,15 @@ function togglecollapse2() {
   var collapse2 = document.getElementById('collapse2');
   collapse2.classList.toggle('active');
 }
-function validateEmail() {
-  var email = document.getElementById('email');
-  var submitButton = document.getElementById('submitButton');
-  var submitBtn = document.getElementById('submitBtn');
-  var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  submitBtn.disabled = !emailRegex.test(email.value);
-}
+// function validateEmail() {
+  
+//   var email = document.getElementById('email');
+//   // var submitButton = document.getElementById('submitButton');
+//   var submitBtn = document.getElementById('submitBtn');
+  
+//   var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+//   submitBtn.disabled = !emailRegex.test(email.value);
+// }
 
 
 function sendMail() {
@@ -87,11 +89,14 @@ function sendMail() {
   }
   emailjs.send("service_r92zzmc","template_hkff0ey", params).then(
   function(){
-  var float = document.getElementByClassName("float")[0];
+  var float = document.getElementsByClassName('float')[0];
   float.style.visibility = 'visible';
   setTimeout(function() {
     float.style.visibility = 'hidden';
     }, 3000);
   })
 }
+
+
+
 
